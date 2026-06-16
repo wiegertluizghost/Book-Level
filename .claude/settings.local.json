@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx expo *)",
+      "Bash(node --input-type=module --eval ' *)",
+      "Bash(node *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\wiege\\\\BookLevel\\\\src\" -Recurse | Select-Object FullName, Attributes | Where-Object { $_.Attributes -notmatch \"Directory\" })",
+      "PowerShell(npm *)",
+      "PowerShell(npx expo --version 2>&1)",
+      "PowerShell(npx playwright --version 2>&1; npx chromium-cli --version 2>&1)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8081\" -UseBasicParsing -TimeoutSec 5 2>&1 | Select-Object -First 5)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8081/index.bundle?platform=web\" -UseBasicParsing -TimeoutSec 10 -Headers @{\"Accept\"=\"text/html\"} 2>&1 | Select-Object StatusCode, StatusDescription; Invoke-WebRequest -Uri \"http://localhost:8081/\" -UseBasicParsing -TimeoutSec 5 -Headers @{\"Accept\"=\"text/html\"} 2>&1 | Select-Object StatusCode, @{Name=\"ContentStart\";Expr={$_.Content.Substring\\(0,[Math]::Min\\(300,$_.Content.Length\\)\\)}})",
+      "PowerShell(Set-Location \"C:\\\\Users\\\\wiege\\\\BookLevel\"; cmd /c \"npx expo start --web --port 8082 > C:\\\\Temp\\\\expo-web.log 2>&1\" &; Start-Sleep -Seconds 12; Get-Content \"C:\\\\Temp\\\\expo-web.log\" | Select-Object -Last 25)",
+      "PowerShell(Start-Sleep -Seconds 10; try { $r = Invoke-WebRequest -Uri \"http://localhost:8082\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\), Length: $\\($r.RawContentLength\\)\" } catch { \"Error: $_\" })",
+      "PowerShell(Start-Sleep -Seconds 5; try { $r = Invoke-WebRequest -Uri \"http://localhost:8082\" -UseBasicParsing -TimeoutSec 8; \"Status: $\\($r.StatusCode\\), Content: $\\($r.Content.Substring\\(0,[Math]::Min\\(200,$r.Content.Length\\)\\)\\)\" } catch { \"Error: $_\" })",
+      "PowerShell(Receive-Job *)",
+      "PowerShell(Get-Job *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:8081/\" -UseBasicParsing -TimeoutSec 5 -Headers @{\"accept\"=\"text/html,application/xhtml+xml\"}; \"Status: $\\($r.StatusCode\\), Content start: $\\($r.Content.Substring\\(0,[Math]::Min\\(300,$r.Content.Length\\)\\)\\)\" } catch { \"Error: $_\" })",
+      "mcp__claude_ai_Canva__request-outline-review",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\wiege\\\\BookLevel\\\\src\\\\screens\\\\books\\\\teste\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object Name, Length, LastWriteTime)",
+      "Bash(npm install *)",
+      "PowerShell(npx skills add https://github.com/vercel-labs/skills--skill find-skills)",
+      "PowerShell(npx skills add https://github.com/vercel-labs/skills --skill find-skills)",
+      "PowerShell(npx skills add https://github.com/vercel-labs/skills --skill find-skills --global)"
+    ]
+  }
+}
