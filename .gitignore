@@ -34,3 +34,5 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 scripts/serviceAccount.json
+.env
+.env.local
